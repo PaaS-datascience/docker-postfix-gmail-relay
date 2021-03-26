@@ -3,9 +3,9 @@ services:
   postfix-gmail-relay:
     build: .
     environment:
-      SYSTEM_TIMEZONE: "America/Los_Angeles"
+      SYSTEM_TIMEZONE: "Europa/Paris"
       MYNETWORKS: "10.0.0.0/8 192.168.0.0/16 172.0.0.0/8"
-      EMAIL: "hello@beautif.ul"
-      EMAILPASS: "abcd1234"
+      EMAIL: ${EMAIL}
+      EMAILPASS: ${EMAILPASS}
     ports:
       - "9025:25"
